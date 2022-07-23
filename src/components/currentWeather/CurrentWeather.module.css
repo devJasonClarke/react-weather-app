@@ -1,5 +1,4 @@
 .weather {
-  min-width: 350px;
   max-width: 500px;
   border-radius: 5px;
   box-shadow: 10px -2px 20px 2p-x rgb(0 0 0 / 30%);
@@ -57,4 +56,15 @@
 
 .parameter-label.red {
   border: 1px solid white;
+}
+
+@media screen and (max-width: 400px) {
+  .bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .details {
+    width: 100%;
+    padding-left: 0;
+  }
 }

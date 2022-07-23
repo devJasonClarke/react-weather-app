@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import "./App.css";
 import CurrentWeather from "./components/currentWeather/CurrentWeather";
+import ForecastWeather from "./components/forecastWeather/ForecastWeather";
 import Search from "./components/search/Search";
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
     Promise.all([currentWeather, forcastWeather])
       .then(async (response) => {
         const weatherResponse = await response[0]?.data;
-        const forcastResponse = await response[1]?.data?.list;
+        const forcastResponse = await response[1]?.data;
 
         setCurrentWeather({ city: searchData.label, ...weatherResponse });
         setForcastWeather({ city: searchData.label, ...forcastResponse });
@@ -60,6 +61,7 @@ function App() {
           <h1 className="message">Please enter a city</h1>
         </>
       )}
+      {forcastWeather ? <ForecastWeather data={forcastWeather} /> : <></>}
     </div>
   );
 }

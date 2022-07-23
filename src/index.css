@@ -8,4 +8,5 @@ body {
   background-color: #d5d4d4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0 15px 15px 15px;
 }
