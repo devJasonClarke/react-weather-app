@@ -19,7 +19,7 @@ const Search = ({ onSearchChange }) => {
       method: "GET",
       url: `${GEO_API_URL}/cities?namePrefix=${inputValue}`,
       headers: {
-        "X-RapidAPI-Key": "1c74a1b75emsh77faf6608832bdcp1672d9jsn013c5163f47c",
+        "X-RapidAPI-Key": `${process.env.REACT_APP_GEO_API_KEY}`,
         "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com"
       }
     };
