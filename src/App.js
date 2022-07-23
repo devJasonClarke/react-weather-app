@@ -61,7 +61,7 @@ function App() {
           <h1 className="message">Please enter a city</h1>
         </>
       )}
-      {forcastWeather ? <ForecastWeather data={forcastWeather} /> : <></>}
+      {forcastWeather ? <ForecastWeather/> : <></>}
     </div>
   );
 }
