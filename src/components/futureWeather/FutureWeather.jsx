@@ -6,9 +6,9 @@ import {
   AccordionItemPanel
 } from "react-accessible-accordion";
 
-import styles from "./ForecastWeather.module.css";
+import styles from "./FutureWeather.module.css";
 
-const ForecastWeather = ({ data }) => {
+const FutureWeather = ({ data }) => {
   const Week_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
   const dayInAWeek = new Date().getDate();
@@ -20,6 +20,7 @@ const ForecastWeather = ({ data }) => {
   return (
     <div>
       <p className={styles["title"]}>Daily</p>
+     
       <Accordion allowZeroExpanded>
         {data.list.splice(0, 7).map((item, index) => {
           return (
@@ -72,4 +73,4 @@ const ForecastWeather = ({ data }) => {
   );
 };
 
-export default ForecastWeather;
+export default FutureWeather;

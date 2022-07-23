@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import "./App.css";
 import CurrentWeather from "./components/currentWeather/CurrentWeather";
-import ForecastWeather from "./components/forecastWeather/ForecastWeather";
+import FutureWeather from "./components/futureWeather/FutureWeather";
 import Search from "./components/search/Search";
 
 function App() {
@@ -61,7 +61,7 @@ function App() {
           <h1 className="message">Please enter a city</h1>
         </>
       )}
-      {forcastWeather ? <ForecastWeather/> : <></>}
+      {forcastWeather ? <FutureWeather data={forcastWeather} /> : <></>}
     </div>
   );
 }
