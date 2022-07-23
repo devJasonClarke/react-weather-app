@@ -10,7 +10,7 @@ function App() {
   const [forcastWeather, setForcastWeather] = useState(null);
 
   const handleOnSearchChange = (searchData) => {
-    console.log(searchData);
+    // console.log(searchData);
 
     const [lat, lon] = searchData.value.split(" ");
 
@@ -31,12 +31,12 @@ function App() {
         setForcastWeather({ city: searchData.label, ...forcastResponse });
       })
       .catch((err) => {
-        console.error(err);
+        // console.error(err);
       });
   };
 
-  console.log(currentWeather);
-  console.log(forcastWeather);
+  // console.log(currentWeather);
+  // console.log(forcastWeather);
 
   return (
     <div className="container">

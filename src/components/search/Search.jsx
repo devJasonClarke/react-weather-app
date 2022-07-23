@@ -27,7 +27,7 @@ const Search = ({ onSearchChange }) => {
     return axios
       .request(geoApiOptions)
       .then((response) => {
-        console.log(response.data.data);
+        // console.log(response.data.data);
         return {
           options: response.data.data.map((city) => {
             return {
@@ -38,7 +38,7 @@ const Search = ({ onSearchChange }) => {
         };
       })
       .catch((error) => {
-        console.error(error);
+        // console.error(error);
       });
   };
 
